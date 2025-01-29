@@ -1,0 +1,15 @@
+diff --git a/kernel/apk_sign.c b/kernel/apk_sign.c
+index 384bb1c5..830ba7fb 100644
+--- a/kernel/apk_sign.c
++++ b/kernel/apk_sign.c
+@@ -314,7 +314,7 @@ module_param_cb(ksu_debug_manager_uid, &expected_size_ops,
+ 
+ #endif
+ 
+-bool is_manager_apk(char *path)
++bool ksu_is_manager_apk(char *path)
+ {
+ 	return check_v2_signature(path, EXPECTED_NEXT_SIZE, EXPECTED_NEXT_HASH);
+-}
+\ No newline at end of file
++}
